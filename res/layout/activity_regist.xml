@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+    
+    <ImageView
+        android:id="@+id/regist_exit"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"    
+        android:background="@drawable/exit_button"
+        />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:weightSum="17"
+        android:background="@drawable/regist" >
+        
+        <TextView 
+            android:layout_width="fill_parent"  
+		    android:layout_height="0dp"
+		    android:layout_weight="9"
+            />
+        
+         <EditText  
+		        android:id="@+id/Regist_edit_name"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/sign_name"	       
+		        android:textSize="12sp"	  
+		        android:textColor="#FFFFFF"      
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp" 
+		        android:paddingLeft="5dp"  
+		        android:background="#1A6416"
+		        android:singleLine="true"   
+		        />  
+		        
+          <EditText  
+		        android:id="@+id/Regist_edit_pwd"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/sign_pwd"	       
+		        android:textSize="12sp"	  
+		        android:inputType="textPassword"
+		        android:textColor="#FFFFFF"        
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp"   
+		        android:paddingLeft="5dp" 
+		        android:background="#1A6416"  
+		        />  
+		        
+           <EditText  
+		        android:id="@+id/Regist_edit_repwd"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/sign_re_pwd"	
+		        android:inputType="textPassword"       
+		        android:textSize="12sp"	        
+		        android:textColorHint="#FFFFFF"
+		        android:textColor="#FFFFFF"  
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp"  
+		        android:paddingLeft="5dp" 
+		        android:background="#1A6416"  
+		        />  
+        
+           <TextView 
+                android:id="@+id/Regist_type_email"
+                android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:textColor="@android:color/white"
+		        android:textSize="12sp"	
+		        android:gravity="center_vertical"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp"   
+		        android:layout_weight="1"
+		        android:text="@string/regist_email"	  
+               />
+           
+           <EditText  
+		        android:id="@+id/Regist_edit_email"  
+		        android:layout_width="fill_parent"  
+		        android:inputType="textEmailSubject"
+		        android:layout_height="wrap_content" 
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp"  
+		        android:layout_marginBottom="15dp"  
+		        android:paddingLeft="5dp"  
+		        android:textSize="13sp"
+		        android:textColor="#1A6416"	        
+		        android:textColorHint="#1A6416"
+		        android:layout_weight="1"
+		        android:background="#D9D9D9"  
+		        /> 
+		        
+            <LinearLayout 
+		        android:layout_width="fill_parent"  
+		        android:layout_height="0dp"  
+		        android:layout_weight="3"
+		        android:gravity="center"
+		        >
+		        
+           <Button 
+                android:id="@+id/Regist_button"
+                android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:background="@drawable/button_green"  
+	            android:text="@string/regist_now"  
+	            android:textColor="#ffffffff"  
+	            android:textSize="12sp" 
+               />
+           </LinearLayout>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/home_copyright"
+        android:gravity="center"
+	    android:layout_marginBottom="6dp"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp" />
+
+</RelativeLayout>

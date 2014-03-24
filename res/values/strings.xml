@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">哎呀口腔问答</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="launcher">启动</string>
+	<string name="quiz">提问</string>
+	<string name="home">进入答题</string>
+	<string name="login">登录</string>
+	<string name="sure">确定</string>
+	<string name="review">再看看</string>
+	<string name="redeem">立刻兑换</string>
+	<string name="sorry">对不起</string>
+	<string name="score">积分</string>
+	<string name="login_not">您还没有登录！</string>
+	<string name="cancle">取消</string>
+	<string name="redeem_score">积分兑换</string>
+	<string name="intenet_no">您没有网络连接</string>
+	
+	<string name="integarl">积分商城</string>
+	<string name="home_copyright">©2014 武汉大学口腔医院 版权所有</string>
+	<string name="exit">退出游戏</string>
+	<string name="exit_content">您是否真的要退出，这样可能获得不了更多的积分呦！</string>
+	<string name="exit_button_ok">确定退出</string>
+	<string name="exit_button_no">继续游戏</string>
+	<string name="exit_score1">此商品需要</string>
+	
+	<string name="exit_score_have">您目前拥有</string>
+	<string name="exit_score_left">兑换后您还剩下</string>
+	
+	<string name="answer_button">请选择</string>
+	<string name="answer_point">请选择答案</string>
+	<string name="answer_right">恭喜您答对了</string>
+	<string name="answer_wrong">很遗憾您答错了</string>	
+	
+	<string name="integral_fraction">分</string>
+	<string name="integral_Again">再答一次</string>
+	<string name="integral_home">回到首页</string>
+	<string name="integral_rank_score">积分排行榜</string>
+	<string name="integral_rank_fighting">还需要加油哟！</string>
+	<string name="integral_rank_first">你是第一名，很棒！</string>
+	<string name="integral_rank_temple">您的积分排名：第</string>
+	<string name="integral_rank_temple2">名</string>
+	<string name="integral_share">好友分享</string>
+	
+	<string name="store_score">您目前所得的积分：</string>
+	<string name="store_not_login">您还没有登录</string>
+    <string name="store_originalscore">所需积分：</string>
+    <string name="store_back">返回游戏</string>
+    <string name="store_change">立刻兑换</string>
+    <string name="store_not_enough">您的积分不够，无法兑换！</string>
+    
+    <string name="sign_name">用户名：</string>
+    <string name="sign_pwd">密码：</string>
+    <string name="sign_re_pwd">再次输入密码：</string>
+    <string name="sign_wrong">您输入用户名或密码不对，请重新输入！</string>
+    <string name="sign_sucess">登录成功</string>
+    <string name="sign_loading">正在登录</string>
+    
+    <string name="regist_email">请输入您的邮箱：</string>
+    <string name="regist_now">立即注册</string>
+    <string name="regist_pwd_wrong">您两次密码输入的不一样！</string>
+    <string name="regist_name_have">此用户名已被使用！</string>
+    <string name="regist_success">注册成功！</string>
+    <string name="regist_email_wrong">输入邮箱格式不对！</string>
+    <string name="regist_loading">正在注册</string>
+    
+    <string name="reset_name">请输入用户名：</string>
+    <string name="reset_email">请输入您的邮箱：</string>
+    <string name="reset_pwd">请输入密码：</string>
+    <string name="reset_re_pwd">请再次输入密码：</string>
+    <string name="reset_info_wrong">您输入的用户名或邮箱信息不对！</string>
+    <string name="reset_loading">正在重置密码</string>
+    
+    <string name="redeem_content_front">您目前兑换的商品是 </string>
+    <string name="redeem_content_cost">消耗 </string>
+    <string name="redeem_content_left">兑换后您还剩下</string>
+    <string name="redeem_hint1">请务必填写正确</string>
+    <string name="redeem_hint2">快递送货时会根据以上信息进行签收</string>
+    <string name="redeem_success_pro">您兑换的商品</string>
+    <string name="redeem_success_reciever">收件人：</string>
+    <string name="redeem_success_phone">电话：</string>
+    <string name="redeem_success_address">地址：</string> 
+    <string name="redeem_success_hint">我们将在3个工作日内为您快递商品，请注意查收！</string>
+    <string name="redeem_success">兑换成功</string>
+	<string name="redeem_continue">继续答题</string>
+    <string name="redeem_info_null">您输入的信息不能为空</string>
+    <string name="redeem_info_wrong">兑换不成功，再试一次！</string>
+    <string name="redeem_loading">正在兑换中</string>
+    <string name="umeng_example_home_btn_analytics">Analytics</string>
+    <string name="umeng_example_home_btn_xp">XP</string>
+    <string name="umeng_example_home_btn_ad">Ads</string>
+    <string name="umeng_example_home_btn_tools">Tools</string>
+    <string name="umeng_example_home_btn_fb">Feedback</string>
+    <string name="umeng_example_home_btn_update">Update</string>
+   
+    <string name="umeng_example_home_btn_xp_ufp">Umeng For Publisher</string>
+    <string name="umeng_example_xp_home_btn_container">Container</string>
+    <string name="umeng_example_xp_home_btn_banner">Banner</string>
+    <string name="umeng_example_xp_home_btn_banner_ufp">"Banner\n(UFP)"</string>
+    <string name="umeng_example_xp_home_btn_handler">Handler</string>
+    <string name="umeng_example_xp_home_btn_handler_ufp">"Handler\n(UFP)"</string>
+    <string name="umeng_example_xp_home_btn_tab">Multi-Pages</string>
+    <string name="umeng_example_xp_home_btn_wap">WebView</string>
+    <string name="umeng_example_xp_home_btn_custom">Custom</string>
+    <string name="umeng_example_xp_home_btn_wap_ufp">"WebView\n(UFP)"</string>
+    <string name="umeng_example_xp_home_btn_push_header">Push AD\n(UFP)</string>
+    <string name="umeng_example_xp_home_btn_textlink">Text Link</string>
+    <string name="umeng_example_xp_home_btn_container_header">LargeImage</string>
+    <string name="umeng_example_xp_home_handler_icons">Icons \n(UFP)</string>
+    <string name="umeng_example_fb_home_btn_simple">Simple Demo</string>
+    <string name="actionbar_activity_not_found">Failed to open intent...</string>
+    <string name="umeng_example_home_hint_wait">Coming soooooon</string>
+    <string name="intro"> The webview before show js call Umeng Analytics APIs</string>
+</resources>

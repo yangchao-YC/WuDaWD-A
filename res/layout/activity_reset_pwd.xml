@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg">
+    
+     <ImageView
+        android:id="@+id/reset_exit"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"    
+        android:background="@drawable/exit_button"
+       />
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:weightSum="13"
+        android:background="@drawable/find_pwd_bg" >
+        
+         <TextView 
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="6"
+             />
+          
+          <EditText  
+		        android:id="@+id/reset_name"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/reset_name"	       
+		        android:textSize="12sp"	  
+		        android:textColor="#FFFFFF"      
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp" 
+		        android:paddingLeft="5dp"  
+		        android:background="#1A6416"  
+		        android:singleLine="true" 
+		        />
+          
+           
+           
+            <EditText  
+		        android:id="@+id/reset_pwd"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/reset_pwd"
+		        android:inputType="textPassword"	       
+		        android:textSize="12sp"	  
+		        android:textColor="#FFFFFF"      
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp" 
+		        android:paddingLeft="5dp"  
+		        android:background="#1A6416"  
+		        />
+            
+             <EditText  
+		        android:id="@+id/reset_re_pwd"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/reset_re_pwd"	  
+		        android:inputType="textPassword"     
+		        android:textSize="12sp"	  
+		        android:textColor="#FFFFFF"      
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp" 
+		        android:paddingLeft="5dp"  
+		        android:background="#1A6416"  
+		        />
+             
+             <EditText  
+		        android:id="@+id/reset_email"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/reset_email"
+		        android:inputType="textEmailAddress"	       
+		        android:textSize="12sp"	  
+		        android:textColor="#FFFFFF"      
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="5dp" 
+		        android:paddingLeft="5dp"  
+		        android:background="#1A6416"  
+		        />
+            
+             <LinearLayout 
+		        android:layout_width="fill_parent"  
+		        android:layout_height="0dp"  
+		        android:layout_weight="3"
+     	        android:gravity="center"
+		        >
+		             <Button 
+		                android:id="@+id/reset_button"
+		                android:layout_width="wrap_content" 
+		                android:layout_marginTop="5dp" 
+			            android:layout_height="wrap_content"  
+			            android:background="@drawable/button_green"  
+			            android:text="@string/sure"  
+			            android:textColor="#ffffffff"  
+			            android:textSize="12sp" 
+		               />
+		      </LinearLayout>       
+      </LinearLayout>
+      
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/home_copyright"
+        android:gravity="center"
+	    android:layout_marginBottom="6dp"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp" />
+    
+</RelativeLayout>

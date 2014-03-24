@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"  
+ >
+ 
+    
+    <ImageView
+        android:id="@+id/sign_exit"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"      
+        android:background="@drawable/exit_button"
+        />
+     
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/sign"       
+        android:weightSum="8"
+        android:orientation="vertical" >
+    
+        <LinearLayout
+          android:layout_width="fill_parent"  
+          android:layout_height="0dp"     
+          android:layout_weight="5"
+             >       
+        </LinearLayout>
+        
+    
+        
+    <LinearLayout  
+        android:id="@+id/Sign_info"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"     
+        android:layout_weight="2"
+        android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" 
+        android:weightSum="4">  
+        
+        <TextView 
+            android:layout_width="fill_parent"  
+            android:layout_height="0dp"     
+            android:layout_weight="1"
+            />
+   
+		     <EditText  
+		        android:id="@+id/Sign_edit_name"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"
+		        android:hint="@string/sign_name"	       
+		        android:textSize="12sp"	
+		        android:textColor="#FFFFFF"        
+		        android:textColorHint="#FFFFFF"
+		        android:layout_weight="1"
+		        android:paddingLeft="5dp"
+		        android:background="#1A6416"
+		        android:singleLine="true"   
+		        />  
+        
+		    
+		      <EditText  
+		        android:id="@+id/Sign_edit_pwd"  
+		        android:layout_width="fill_parent"  
+		        android:layout_height="wrap_content"  	        
+		        android:inputType="textPassword" 
+     	        android:hint="@string/sign_pwd"	        
+		        android:layout_marginTop="5dp"   
+		        android:paddingLeft="5dp" 
+		        android:textSize="12sp" 
+		        android:layout_weight="1"
+		        android:textColor="#FFFFFF"  		        
+		        android:textColorHint="#FFFFFF"
+		        android:background="#1A6416"  
+		        />  
+		        
+		      <TextView 
+		          android:id="@+id/Sign_forget_psd"  
+		          android:layout_width="fill_parent"  
+		          android:layout_height="wrap_content" 
+		          android:layout_weight="1"		        
+		          android:gravity="center_vertical|right"
+		          android:textSize="12sp" 
+		          android:textColor="@android:color/white"
+		          android:text="忘记密码"
+		          />
+		   
+    </LinearLayout>  
+        
+    <LinearLayout 
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:gravity="center_vertical"
+        >
+    <Button  
+        android:id="@+id/Sign_button_login"  
+        android:layout_width="0dp"  
+        android:layout_height="wrap_content"  
+        android:layout_weight="1"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/button_blue"  
+        android:textSize="12sp"
+        android:textColor="#ffffffff"  
+        android:text="立即登陆" />  
+  
+   
+     <Button  
+            android:id="@+id/Sign_button_regist"  
+            android:layout_width="0dp"  
+            android:layout_height="wrap_content"  
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_green"  
+            android:text="注册新用户"  
+            android:textColor="#ffffffff"  
+            android:textSize="12sp" /> 
+      </LinearLayout>         
+    </LinearLayout>
+
+   
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/home_copyright"
+        android:gravity="center"
+	    android:layout_marginBottom="6dp"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp" />
+   
+</RelativeLayout>

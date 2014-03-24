@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+  	
+    <LinearLayout
+        android:id="@+id/exit_bg"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/exit"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/exit_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="@string/exit" />
+        
+        <TextView
+            android:id="@+id/exit_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:text="@string/exit_content" />
+        
+          <LinearLayout 
+            android:id="@+id/Redeem_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+              <ImageView
+                  android:id="@+id/Redeem_image"
+                  android:layout_width="110dp"
+                  android:layout_height="110dp"       
+                  android:background="@android:color/transparent" />
+              
+               <LinearLayout 
+                  android:layout_width="wrap_content"
+                  android:layout_height="100dp"
+                  android:orientation="vertical"
+                  android:layout_weight="1"
+                   >
+                   
+                   <LinearLayout 
+                        android:id="@+id/Redeem_score_need"
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="15dp"	 
+		                android:layout_marginLeft="10dp"              
+                       >                  
+                       
+                     <TextView 
+                        android:id="@+id/Redeem_need_temple1"                      
+		                android:text="@string/exit_score1"
+		                android:textSize="9sp"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="#FFFFFF"
+                         />
+                     
+                      <TextView
+                        android:id="@+id/Redeem_need_score"
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content" 
+		                android:layout_marginLeft="2dp"   
+		                android:layout_marginRight="2dp"                    
+		                android:text="270"
+		                android:textSize="15sp"
+		                android:textColor="#FFFFFF"
+                         />
+                      
+                       <TextView  
+                        android:id="@+id/Redeem_need_temple2"                      
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"                     
+		                android:text="@string/score"
+		                android:textSize="9sp"
+		                android:textColor="#FFFFFF"
+                         />
+                   </LinearLayout>
+                   
+                   <LinearLayout 
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content" 
+		                android:layout_marginLeft="10dp"
+		                android:layout_marginTop="25dp"
+                       >
+                       
+                       <TextView 
+                        android:id="@+id/Redeem_have_temple1"                      
+		                android:text="@string/exit_score_have"
+		                android:textSize="9sp"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="#FFFFFF"
+                         />
+                       
+                       <TextView
+                        android:id="@+id/Redeem_have_score"
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content" 
+		                android:layout_marginLeft="2dp"   
+		                android:layout_marginRight="2dp" 		                             
+		                android:text="1700"
+		                android:textSize="12sp"
+		                android:textColor="#FFFFFF"
+                         />
+                       
+                        <TextView 
+                        android:id="@+id/Redeem_have_temple2"      
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"                     
+		                android:text="@string/score"
+		                android:textSize="9sp"
+		                android:textColor="#FFFFFF"
+                         />
+                   </LinearLayout>
+                   
+                   
+                   <LinearLayout 
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"  
+		                android:layout_marginLeft="10dp"
+                       >  
+                       
+                        <TextView   
+                        android:id="@+id/Redeem_left_temple1"                         
+		                android:text="@string/exit_score_left"
+		                android:textSize="9sp"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textColor="#FFFFFF"
+                         />
+                       
+                       <TextView
+                        android:id="@+id/Redeem_left_score"
+                        android:layout_width="wrap_content"
+		                android:layout_height="wrap_content" 
+		                android:layout_marginLeft="2dp"   
+		                android:layout_marginRight="2dp"                    
+		                android:text="1430"
+		                android:textSize="12sp"
+		                android:textColor="#FFFFFF"
+                         />
+                   </LinearLayout>
+                 </LinearLayout>           
+          </LinearLayout>
+        
+       
+        
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" 
+            android:layout_marginTop="23dp"               
+            android:orientation="horizontal">
+            
+            <Button 
+                android:id="@+id/exit_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/exit_ok"
+                android:text="@string/exit_button_no"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+            <Button 
+                android:id="@+id/exit_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/exit_no"
+                android:text="@string/exit_button_ok"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </LinearLayout>
+   
+      </LinearLayout>
+</RelativeLayout>
