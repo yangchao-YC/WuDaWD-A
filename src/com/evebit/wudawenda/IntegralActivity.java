@@ -15,6 +15,7 @@ import com.evebit.json.Test_Model_TianQi;
 import com.evebit.json.Y_Exception;
 import com.evebit.ui.MyDialog;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.umeng.socialize.controller.RequestType;
 import com.umeng.socialize.controller.UMServiceFactory;
 import com.umeng.socialize.controller.UMSocialService;
@@ -164,7 +165,7 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 		
 		/**
 		 * 微信分享
-		 */
+		 
         mController.getConfig().supportQQPlatform(IntegralActivity.this, "http://www.umeng.com/social");  		
 		// wx967daebe835fbeac是你在微信开发平台注册应用的AppID, 这里需要替换成你注册的AppID
 		String appID = "wx3371792d0858282a";
@@ -183,6 +184,10 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 		//新浪微博
 		mController.getConfig().setSsoHandler(new SinaSsoHandler());
 		//设置腾讯微博SSO handler
+		 * 
+		 */
+		
+		 mController.getConfig().removePlatform(SHARE_MEDIA.DOUBAN,SHARE_MEDIA.RENREN,SHARE_MEDIA.QQ,SHARE_MEDIA.QZONE,SHARE_MEDIA.SINA);
 		mController.getConfig().setSsoHandler(new TencentWBSsoHandler());
 		
 		

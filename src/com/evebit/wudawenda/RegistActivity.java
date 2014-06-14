@@ -129,7 +129,8 @@ public class RegistActivity extends Activity implements OnClickListener {
 				break;
 			case 4:
 				 nameTextView.setText("");
-				 showTextToast(getString(R.string.regist_name_have));				 
+				 showTextToast(getString(R.string.regist_name_have));	
+				 progressDialog.dismiss();
 				 break;
 			case 5:
 				//·µ»ØÊ×Ò³		
