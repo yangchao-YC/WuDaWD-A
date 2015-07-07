@@ -12,7 +12,10 @@ import java.util.WeakHashMap;
 import java.util.concurrent.ExecutorService;   
 import java.util.concurrent.Executors;    
 
-import com.evebit.wudawenda.R;
+import com.whuss.oralanswers.R;
+
+
+
 
 
 
@@ -57,12 +60,12 @@ public class ImageLoader {
 	    {   
 	        File f=fileCache.getFile(url);   
 	    
-	        //浠巗d鍗� 
+	        //娴�宸�d����??�? 
 	        Bitmap b = decodeFile(f);   
 	        if(b!=null)   
 	            return b;   
 	    
-	        //浠庣綉缁� 
+	        //娴�??��??���?��??�? 
 			try {
 				Bitmap bitmap =null;
 				URL	imageUrl = new URL(url);
@@ -86,15 +89,15 @@ public class ImageLoader {
 	        
 	    }   
 	    
-	    //瑙ｇ爜鍥惧儚鐢ㄦ潵鍑忓皯鍐呭瓨娑堣�  
+	    //����??������???��?��������娼�?����??������������??������?????  
 	    private Bitmap decodeFile(File f){   
 	        try {   
-	            //瑙ｇ爜鍥惧儚澶у皬  
+	            //����??������???��?��婢�??����  
 	            BitmapFactory.Options o = new BitmapFactory.Options();   
 	            o.inJustDecodeBounds = true;   
 	            BitmapFactory.decodeStream(new FileInputStream(f),null,o);   
 	    
-	            //鎵惧埌姝ｇ‘鐨勫埢搴﹀�锛屽畠搴旇鏄�鐨勫箓銆� 
+	            //��???��?���?��??������??������?��达���??�?��??????�����?��������???�?��?����??����???�? 
 	            final int REQUIRED_SIZE=70;   
 	            int width_tmp=o.outWidth, height_tmp=o.outHeight;   
 	            int scale=1;   
@@ -113,7 +116,7 @@ public class ImageLoader {
 	        return null;   
 	    }   
 	    
-	   //浠诲姟闃熷垪  
+	   //娴�??????�������峰��  
 	    private class PhotoToLoad   
 	    {   
 	        public String url;   
@@ -151,7 +154,7 @@ public class ImageLoader {
 	        return false;   
 	    }   
 	    
-	    //鐢ㄤ簬鏄剧ず浣嶅浘鍦║I绾跨▼  
+	    //������????������??��娴�??��娴�������I�????�?���?  
 	    class BitmapDisplayer implements Runnable   
 	    {   
 	        Bitmap bitmap;   

@@ -5,7 +5,7 @@ public class FileCache {
 	private File cacheDir;  
     
     public FileCache(Context context){  
-        //æ‰¾ä¸€ä¸ªç”¨æ¥ç¼“å­˜å›¾ç‰‡çš„è·¯å¾„  
+        //??¾ä??ä¸???¨æ?¥ç??å­???¾ç?????è·?å¾?  
         if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED))  
             cacheDir=new File(android.os.Environment.getExternalStorageDirectory(),"LazyList");  
         else  

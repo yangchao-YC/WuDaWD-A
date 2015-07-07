@@ -1,7 +1,9 @@
 package com.evebit.ui;
 
 
-import com.evebit.wudawenda.R;
+
+
+import com.whuss.oralanswers.R;
 
 import android.app.Dialog;
 import android.content.Context;

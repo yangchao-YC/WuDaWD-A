@@ -17,11 +17,11 @@ import com.evebit.json.Test_Model_TianQi;
 import com.evebit.json.Y_Exception;
 import com.evebit.ui.MyDialog;
 import com.evebit.ui.RedeemDialog;
-import com.evebit.wudawenda.AnswerActivity;
-import com.evebit.wudawenda.IntegralActivity;
-import com.evebit.wudawenda.R;
-import com.evebit.wudawenda.SignActivity;
-import com.evebit.wudawenda.StoreActivity;
+import com.whuss.oralanswers.AnswerActivity;
+import com.whuss.oralanswers.IntegralActivity;
+import com.whuss.oralanswers.R;
+import com.whuss.oralanswers.SignActivity;
+import com.whuss.oralanswers.StoreActivity;
 
 import android.R.integer;
 import android.app.ProgressDialog;

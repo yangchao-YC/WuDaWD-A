@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;  
 import android.graphics.Bitmap;
 public class MemoryCache {
-	private Map<String, SoftReference<Bitmap>> cache=Collections.synchronizedMap(new HashMap<String, SoftReference<Bitmap>>());//è½¯å¼•ç”¨  
+	private Map<String, SoftReference<Bitmap>> cache=Collections.synchronizedMap(new HashMap<String, SoftReference<Bitmap>>());//è½?å¼????  
     
     public Bitmap get(String id){  
         if(!cache.containsKey(id))  

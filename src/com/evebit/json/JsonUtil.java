@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 /**
- * Json??��??�????�?
+ * Json??��??�?????�??
  * @author Administrator
  *
  */
@@ -16,7 +16,7 @@ public class JsonUtil {
 
 	
 	/**
-	 * Json??��??�?List对象
+	 * Json??��??�??List对象
 	 * @param data
 	 * @return
 	 */
@@ -30,7 +30,7 @@ public class JsonUtil {
 	}
 	
 	/**
-	 * Json??��??�?Map对象
+	 * Json??��??�??Map对象
 	 * @param data
 	 * @return
 	 */
@@ -44,7 +44,7 @@ public class JsonUtil {
 	}
 	
 	/**
-	 * Json??��??�?对�??
+	 * Json??��??�??对�??
 	 * @param data
 	 * @param c
 	 * @return

@@ -2,13 +2,13 @@ package com.evebit.json;
 
 
 /**
- * imgurl   	å›¾ç‰‡é“¾æ¥
- * introtext 	å•†å“ä»‹ç»
- * title		æ ‡é¢˜
- * integral     ç§¯åˆ†
- * username     ç”¨æˆ·å
- * email        é‚®ç®±
- * id           å•†å“id
+ * imgurl   	??¾ç????¾æ??
+ * introtext 	??????ä»?ç»?
+ * title		???é¢?
+ * integral     ç§????
+ * username     ??¨æ?·å??
+ * email        ???ç®?
+ * id           ??????id
  */
 
 

@@ -28,13 +28,13 @@ public class Normal {
     	.getSystemService(Context.CONNECTIVITY_SERVICE);
     	NetworkInfo networkinfo = con.getActiveNetworkInfo();
     	if (networkinfo == null || !networkinfo.isAvailable()) {
-//	    	Toast.makeText(context.getApplicationContext(), "é å›¬æ”±é¡¥æˆ¦å¼»éŠ‰Ñ…ç§¹ç¼‚ä½¹ç²ç»»æ¶¢å¹’é”Ÿï¿½Toast.LENGTH_LONG).show();
+//	    	Toast.makeText(context.getApplicationContext(), "????????±é¡¥???å¼»é????ç§¹ç??ä½¹ç??ç»»æ¶¢å¹????ï¿?Toast.LENGTH_LONG).show();
 	    	return false;
     	}
 //    	boolean wifi = con.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
 //	    	.isConnectedOrConnecting();
 //	    	if (!wifi) {
-//	    	Toast.makeText(context.getApplicationContext(), "ç€µã‚‰ç¼šé¡”å‘´å¹ƒéŠŠã‚…â–é–»â‘©æ™¸IFIå¨´çŠ®å„±é£è™¹äº¸é´ç‚µã‚¦é—æ’éªç»±ï¿½,
+//	    	Toast.makeText(context.getApplicationContext(), "??µã??ç¼?é¡???´å?????????????»â?©æ??IFIå¨´ç????±é?£è?¹äº¸??´ç?µã????????éª?ç»±ï¿½,
 //	    	Toast.LENGTH_SHORT).show();
 //    	}
     	return true;
@@ -55,7 +55,7 @@ public class Normal {
     }
     
 	public String getWebviewData(Context context,String url){
-		String webviewcontent = "æµ‹è¯•";
+		String webviewcontent = "æµ?è¯?";
 		Log.v("url", url);
 		String datainfo = "";
 		datainfo = TrycatchTime(url, context);

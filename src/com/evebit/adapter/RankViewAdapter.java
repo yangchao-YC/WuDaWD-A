@@ -3,7 +3,7 @@ package com.evebit.adapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.evebit.wudawenda.R;
+import com.whuss.oralanswers.R;
 import com.umeng.socialize.net.v;
 
 import android.content.Context;

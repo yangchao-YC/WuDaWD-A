@@ -7,7 +7,7 @@ import android.widget.Toast;
 public class Y_Exception extends Exception {
 
 	/**
-	 * ï¿½???ï¿½ï¿½??ï¿½?ï¿½?å¸¸ï¿½?????????????ï¿½ç±»
+	 * ï¿????ï¿½ï¿½??ï¿??ï¿??å¸¸ï¿½?????????????ï¿½ç±»
 	 * 
 	 * @author Administrator
 	 * 
@@ -30,7 +30,7 @@ public class Y_Exception extends Exception {
 	}
 
 	/**
-	 * ï¿½?å¸¸ï¿½??ï¿½?
+	 * ï¿??å¸¸ï¿½??ï¿??
 	 * @param context
 	 */
 	public void exception_Prompt(Context context) {
@@ -52,7 +52,7 @@ public class Y_Exception extends Exception {
 	}
 
 	/**
-	 * httpï¿½?ï¿½?
+	 * httpï¿??ï¿??
 	 * @param code
 	 * @return
 	 */
@@ -61,7 +61,7 @@ public class Y_Exception extends Exception {
 	}
 
 	/**
-	 * ï¿½?ï¿½?ï¿½?ï¿½?
+	 * ï¿??ï¿??ï¿??ï¿??
 	 * @param e
 	 * @return
 	 */
@@ -70,7 +70,7 @@ public class Y_Exception extends Exception {
 	}
 
 	/**
-	 * ??ï¿½ï¿½??è§£ï¿½??ï¿½?ï¿½?
+	 * ??ï¿½ï¿½??è§£ï¿½??ï¿??ï¿??
 	 * @param e
 	 * @return
 	 */
@@ -79,7 +79,7 @@ public class Y_Exception extends Exception {
 	}
 
 	/**
-	 * ???ä»¶ï¿½??ï¿½?
+	 * ???ä»¶ï¿½??ï¿??
 	 * @param e
 	 * @return
 	 */

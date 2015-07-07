@@ -1,17 +1,17 @@
 package com.evebit.json;
 
 /**
- * username     ç”¨æˆ·å
- * password 	å¯†ç 
- * type		        æ ‡é¢˜
- * errorid      è¿”å›é”™è¯¯ä¿¡æ¯
- * integral     ç§¯åˆ†
- * email        é‚®ç®±
- * rankings     ç”¨æˆ·æ’å
- * name         é€è´§å§“å
- * phone        é€è´§ç”µè¯
- * address      é€è´§åœ°å€
- * lpid         å…‘æ¢å•†å“id
+ * username     ??¨æ?·å??
+ * password 	å¯????
+ * type		        ???é¢?
+ * errorid      è¿???????è¯?ä¿¡æ??
+ * integral     ç§????
+ * email        ???ç®?
+ * rankings     ??¨æ?·æ?????
+ * name         ???è´§å?????
+ * phone        ???è´§ç?µè??
+ * address      ???è´§å?°å??
+ * lpid         ?????¢å?????id
  */
 
 public class Test_Model_TianQi {

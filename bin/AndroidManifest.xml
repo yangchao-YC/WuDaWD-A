@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.evebit.wudawenda"
-    android:versionCode="2"
-    android:versionName="1.0" >
+    package="com.whuss.oralanswers"
+    android:versionCode="7"
+    android:versionName="1.5" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -31,9 +31,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" 
-        android:name="MyApplication">
+        android:name="com.whuss.oralanswers.MyApplication">
         <activity
-            android:name="com.evebit.wudawenda.LoginActivity"
+            android:name="com.whuss.oralanswers.LoginActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
@@ -44,29 +44,29 @@
             
         </activity>
         
-        <activity android:name="com.evebit.wudawenda.AnswerActivity"
+        <activity android:name="com.whuss.oralanswers.AnswerActivity"
             				android:label="@string/app_name"
             				android:screenOrientation="portrait"
             				></activity>
-        <activity android:name="com.evebit.wudawenda.IntegralActivity"
+        <activity android:name="com.whuss.oralanswers.IntegralActivity"
             				android:label="@string/app_name"
             				android:screenOrientation="portrait"
             				></activity>
-         <activity android:name="com.evebit.wudawenda.StoreActivity"
+         <activity android:name="com.whuss.oralanswers.StoreActivity"
             				android:label="@string/app_name"
             				android:screenOrientation="portrait"
             				></activity>
-          <activity android:name="com.evebit.wudawenda.SignActivity"
+          <activity android:name="com.whuss.oralanswers.SignActivity"
             				android:label="@string/app_name"
             				android:screenOrientation="portrait"
             			    ></activity>
          
-           <activity android:name="com.evebit.wudawenda.RegistActivity"
+           <activity android:name="com.whuss.oralanswers.RegistActivity"
             				android:label="@string/app_name"
             				android:screenOrientation="portrait"
             			    ></activity>
            
-           <activity android:name="com.evebit.wudawenda.ResetActivity"
+           <activity android:name="com.whuss.oralanswers.ResetActivity"
             				android:label="@string/app_name"
             				android:screenOrientation="portrait"
             			    ></activity>
