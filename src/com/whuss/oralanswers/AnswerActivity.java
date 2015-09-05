@@ -13,15 +13,14 @@ import com.evebit.ui.MyDialog;
 import com.whuss.oralanswers.R;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.controller.RequestType;
+
 import com.umeng.socialize.controller.UMServiceFactory;
 import com.umeng.socialize.controller.UMSocialService;
-import com.umeng.socialize.controller.UMSsoHandler;
-import com.umeng.socialize.controller.UMWXHandler;
 import com.umeng.socialize.media.UMImage;
-import com.umeng.socialize.sso.QZoneSsoHandler;
-import com.umeng.socialize.sso.SinaSsoHandler;
-import com.umeng.socialize.sso.TencentWBSsoHandler;
+import com.umeng.socialize.sso.UMSsoHandler;
+import com.umeng.socialize.weixin.controller.UMWXHandler;
+import com.umeng.socialize.weixin.media.CircleShareContent;
+import com.umeng.socialize.weixin.media.WeiXinShareContent;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -115,8 +114,9 @@ public class AnswerActivity extends Activity implements android.view.View.OnClic
 	List<Integer> Sumlist = new ArrayList<Integer>();
 
 	//分享功能
-	final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share", RequestType.SOCIAL);
-
+	//final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share", RequestType.SOCIAL);
+	
+	final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share");
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -172,32 +172,47 @@ public class AnswerActivity extends Activity implements android.view.View.OnClic
 		D_TextView.setTypeface(typeface);
 
 
-
-
+/*
+String appID = "wx3371792d0858282a";
 		mController.getConfig().supportQQPlatform(AnswerActivity.this, "http://www.umeng.com/social");  		
 		// wx967daebe835fbeac是你在微信开发平台注册应用的AppID, 这里需要替换成你注册的AppID
 		String appID = "wx3371792d0858282a";
 		// 微信图文分享必须设置一个url 
 		String contentUrl = "http://www.umeng.com/social";
 		// 添加微信平台，参数1为当前Activity, 参数2为用户申请的AppID, 参数3为点击分享内容跳转到的目标url
-		UMWXHandler wxHandler = mController.getConfig().supportWXPlatform(AnswerActivity.this,appID, contentUrl);
+	//	UMWXHandler wxHandler = mController.getConfig().supportWXPlatform(AnswerActivity.this,appID, contentUrl);
 		//设置分享标题
-		wxHandler.setWXTitle("哎呀口腔问答");
+	//	wxHandler.setWXTitle("口腔知识问答");
 		// 支持微信朋友圈
-		UMWXHandler circleHandler = mController.getConfig().supportWXCirclePlatform(AnswerActivity.this,appID, contentUrl) ;
-		circleHandler.setCircleTitle("哎呀口腔问答");
+	//	UMWXHandler circleHandler = mController.getConfig().supportWXCirclePlatform(AnswerActivity.this,appID, contentUrl) ;
+	//	circleHandler.setCircleTitle("口腔知识问答");
 
 		//qq空间
-		mController.getConfig().setSsoHandler(new QZoneSsoHandler(AnswerActivity.this));
-		//新浪微博
+	//	mController.getConfig().setSsoHandler(new QZoneSsoHandler(AnswerActivity.this));
+	//	//新浪微博
 		mController.getConfig().setSsoHandler(new SinaSsoHandler());
 		//设置腾讯微博SSO handler
 
 
-		mController.getConfig().removePlatform(SHARE_MEDIA.DOUBAN,SHARE_MEDIA.RENREN,SHARE_MEDIA.SMS);
+		
 		mController.getConfig().setSsoHandler(new TencentWBSsoHandler());
+*/
 
-
+		String appID = "wx4f9b4f89d241741a";
+		String appSecret = "0fb57f6d2b9547d1396cf8cfcddb87f2";
+		
+		UMWXHandler wxHandler = new UMWXHandler(AnswerActivity.this,appID,appSecret);
+		wxHandler.addToSocialSDK();
+		// 支持微信朋友圈
+		UMWXHandler wxCircleHandler = new UMWXHandler(AnswerActivity.this,appID,appSecret);
+		wxCircleHandler.setToCircle(true);
+		wxCircleHandler.addToSocialSDK();
+		
+		
+		
+		mController.getConfig().removePlatform(SHARE_MEDIA.DOUBAN,SHARE_MEDIA.RENREN,SHARE_MEDIA.SMS);
+		
+		
 		for (int i = 1; i <= 183; i++) {
 			Sumlist.add(i);
 		}
@@ -214,11 +229,11 @@ public class AnswerActivity extends Activity implements android.view.View.OnClic
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
-		 /**使用SSO授权必须添加如下代码 */
+		 /**使用SSO授权必须添加如下代码*/
 	    UMSsoHandler ssoHandler = mController.getConfig().getSsoHandler(requestCode) ;
 	    if(ssoHandler != null){
 	       ssoHandler.authorizeCallBack(requestCode, resultCode, data);
-	    }	
+	    }	 
 	}
 	
 	
@@ -609,7 +624,7 @@ public class AnswerActivity extends Activity implements android.view.View.OnClic
 	private void share()
 	{
 		shareResult();
-		mController.openShare(AnswerActivity.this, false);
+	//	mController.openShare(AnswerActivity.this, false);
 	}
 
 	/**
@@ -617,14 +632,53 @@ public class AnswerActivity extends Activity implements android.view.View.OnClic
 	 */
 	private void shareResult() {
 		// TODO Auto-generated method stub
-		mController.setShareContent("哎呀口腔问答!------>" +
+
+		
+		String shareString = "哎呀口腔问答!------>" +
 				"问题："+answerTextView.getText().toString()
 				+"A:"+ A_TextView.getText().toString()
 				+"B:"+ B_TextView.getText().toString()
 				+"C:"+ C_TextView.getText().toString()
-				+"D:"+ D_TextView.getText().toString());
+				+"D:"+ D_TextView.getText().toString();
+		
+		
+		
+		
+		
+		WeiXinShareContent weixinContent = new WeiXinShareContent();
+		
+		weixinContent.setTitle("口腔知识问答");
+		
+		weixinContent.setShareContent(shareString);
+		
+		weixinContent.setTargetUrl("http://www.whuss.com/");
+		
+		mController.setShareMedia(weixinContent);
+		
+		
+		
+		
+		CircleShareContent circleMedia = new CircleShareContent();
+		circleMedia.setShareContent(shareString);
+		//设置朋友圈title
+		circleMedia.setTitle("口腔知识问答");
 
+		circleMedia.setTargetUrl("http://www.whuss.com/");
+		mController.setShareMedia(circleMedia);
+		mController.openShare(AnswerActivity.this, false);
+		
+		mController.setShareContent(shareString);
+
+		
+		//mController.setShareContent("友盟社会化组件（SDK）让移动应用快速整合社交分享功能，http://www.umeng.com/social");
+		
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	/**
@@ -698,4 +752,12 @@ public class AnswerActivity extends Activity implements android.view.View.OnClic
 		}
 
 	}
+	
+	
+	
 }
+
+
+
+
+

@@ -237,7 +237,7 @@ public class RegistActivity extends Activity implements OnClickListener {
     
     
     /**
-     * 检测用户名是否已经被注册
+     * 注册信息
      */
 	private void messageUrlRegist(final String age,final String sex) {
 		// TODO Auto-generated method stub
@@ -353,7 +353,7 @@ public class RegistActivity extends Activity implements OnClickListener {
 			pwdTextView.setText("");
 			re_pwd_TextView.setText("");
 			showTextToast(getString(R.string.regist_pwd_wrong));
-    	}else if(!(emailTextView.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+") && emailTextView.getText().toString().length() > 0)){
+    	}else if(!(emailTextView.getText().toString().matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\\.+[a-z]+") && emailTextView.getText().toString().length() > 0)){
 			//Toast.makeText(getApplicationContext(), getResources().getString(R.string.intenet_no), Toast.LENGTH_SHORT).show();
     		showTextToast(getString(R.string.regist_email_wrong));
     	}else{

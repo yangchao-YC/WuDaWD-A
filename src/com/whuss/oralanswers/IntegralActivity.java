@@ -17,15 +17,14 @@ import com.evebit.ui.MyDialog;
 import com.whuss.oralanswers.R;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.controller.RequestType;
 import com.umeng.socialize.controller.UMServiceFactory;
 import com.umeng.socialize.controller.UMSocialService;
-import com.umeng.socialize.controller.UMSsoHandler;
-import com.umeng.socialize.controller.UMWXHandler;
 import com.umeng.socialize.media.UMImage;
-import com.umeng.socialize.sso.QZoneSsoHandler;
-import com.umeng.socialize.sso.SinaSsoHandler;
-import com.umeng.socialize.sso.TencentWBSsoHandler;
+import com.umeng.socialize.sso.UMSsoHandler;
+import com.umeng.socialize.weixin.controller.UMWXHandler;
+import com.umeng.socialize.weixin.media.CircleShareContent;
+import com.umeng.socialize.weixin.media.WeiXinShareContent;
+
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -74,6 +73,9 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 	private LinearLayout integral_rank_you; //显示第几名，登录显示排名和未登录不显示信息
 	private ImageView left_dot, right_dot; //滑动页面的下面的两个点
 	
+	
+//	final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share");
+	
 	Typeface typeface;
 	MyDialog dialog;
 	private String user_name_string; //用户名
@@ -93,9 +95,10 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 	
 	Bitmap bitmap;//分享时屏幕截图
 	private String selfRank;
+	final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share");
 
 	//分享功能
-	final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share", RequestType.SOCIAL);
+//	final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share", RequestType.SOCIAL);
 	
 	private ArrayList<HashMap<String, Object>> rank_list = new ArrayList<HashMap<String,Object>>();
 	
@@ -164,7 +167,7 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 		 */
 		fractionTextView.setText(fraction+getResources().getString(R.string.integral_fraction));
 		
-
+/*
 		 
         mController.getConfig().supportQQPlatform(IntegralActivity.this, "http://www.umeng.com/social");  		
 		// wx967daebe835fbeac是你在微信开发平台注册应用的AppID, 这里需要替换成你注册的AppID
@@ -174,20 +177,48 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 		// 添加微信平台，参数1为当前Activity, 参数2为用户申请的AppID, 参数3为点击分享内容跳转到的目标url
 		UMWXHandler wxHandler = mController.getConfig().supportWXPlatform(IntegralActivity.this,appID, contentUrl);
 		//设置分享标题
-		wxHandler.setWXTitle("哎呀口腔问答");
+		wxHandler.setWXTitle("口腔知识问答");
 		// 支持微信朋友圈
 		UMWXHandler circleHandler = mController.getConfig().supportWXCirclePlatform(IntegralActivity.this,appID, contentUrl) ;
-		circleHandler.setCircleTitle("哎呀口腔问答");
+		circleHandler.setCircleTitle("口腔知识问答");
+		
+		
+		String appID = "wx967daebe835fbeac";
+		String appSecret = "5fa9e68ca3970e87a1f83e563c8dcbce";
+		// 添加微信平台
+		UMWXHandler wxHandler = new UMWXHandler(getActivity(),appId,appSecret);
+		wxHandler.addToSocialSDK();
+		// 支持微信朋友圈
+		UMWXHandler wxCircleHandler = new UMWXHandler(getActivity(),appId,appSecret);
+		wxCircleHandler.setToCircle(true);
+		wxCircleHandler.addToSocialSDK();
+		*/
 		
 		//qq空间
-		mController.getConfig().setSsoHandler(new QZoneSsoHandler(IntegralActivity.this));
+	//	mController.getConfig().setSsoHandler(new QZoneSsoHandler(IntegralActivity.this));
 		//新浪微博
-		mController.getConfig().setSsoHandler(new SinaSsoHandler());
+		//mController.getConfig().setSsoHandler(new SinaSsoHandler());
 		//设置腾讯微博SSO handler
 
 		
-		mController.getConfig().removePlatform(SHARE_MEDIA.DOUBAN,SHARE_MEDIA.RENREN,SHARE_MEDIA.SMS,SHARE_MEDIA.EMAIL);
-		mController.getConfig().setSsoHandler(new TencentWBSsoHandler());
+		//mController.getConfig().removePlatform(SHARE_MEDIA.DOUBAN,SHARE_MEDIA.RENREN,SHARE_MEDIA.SMS,SHARE_MEDIA.EMAIL);
+		//mController.getConfig().setSsoHandler(new TencentWBSsoHandler());
+		
+		
+		String appID = "wx4f9b4f89d241741a";
+		String appSecret = "0fb57f6d2b9547d1396cf8cfcddb87f2";
+		
+		UMWXHandler wxHandler = new UMWXHandler(IntegralActivity.this,appID,appSecret);
+		wxHandler.addToSocialSDK();
+		// 支持微信朋友圈
+		UMWXHandler wxCircleHandler = new UMWXHandler(IntegralActivity.this,appID,appSecret);
+		wxCircleHandler.setToCircle(true);
+		wxCircleHandler.addToSocialSDK();
+		
+		
+		
+		mController.getConfig().removePlatform(SHARE_MEDIA.DOUBAN,SHARE_MEDIA.RENREN,SHARE_MEDIA.SMS);
+		
 		
 		
 		shareButton.setOnClickListener(this);
@@ -379,9 +410,45 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 	 */
 	private void shareResult() {
 		// TODO Auto-generated method stub
-		mController.setShareContent("哎呀口腔问答采用问答的游戏方式，配以幽默诙谐的背景和卡通元素，以通俗易懂的问答形式向广大用户推介了口腔各种常见病的医疗保健知识。");
+		//mController.setShareContent("哎呀口腔问答采用问答的游戏方式，配以幽默诙谐的背景和卡通元素，以通俗易懂的问答形式向广大用户推介了口腔各种常见病的医疗保健知识。");
 		//设置分享图片, 参数2为图片的url地址
-		mController.setShareMedia(new UMImage(IntegralActivity.this, bitmap));	
+		//mController.setShareMedia(new UMImage(IntegralActivity.this, bitmap));	
+		
+		String shareString = "口腔知识问答采用问答的游戏方式，配以幽默诙谐的背景和卡通元素，以通俗易懂的问答形式向广大用户推介了口腔各种常见病的医疗保健知识。";
+		
+		
+		
+		mController.setShareMedia(new UMImage(IntegralActivity.this, bitmap));
+		
+		WeiXinShareContent weixinContent = new WeiXinShareContent();
+		
+		weixinContent.setTitle("口腔知识问答");
+		
+		weixinContent.setShareContent(shareString);
+		
+		weixinContent.setTargetUrl("http://www.whuss.com/");
+		
+		
+		
+		
+		mController.setShareMedia(weixinContent);
+		
+		
+		
+		
+		CircleShareContent circleMedia = new CircleShareContent();
+		circleMedia.setShareContent(shareString);
+		//设置朋友圈title
+		circleMedia.setTitle("口腔知识问答");
+
+		circleMedia.setTargetUrl("http://www.whuss.com/");
+		mController.setShareMedia(circleMedia);
+		mController.openShare(IntegralActivity.this, false);
+		
+		mController.setShareContent(shareString);
+		
+		
+		
 	}
 	
 	/**
@@ -532,7 +599,7 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 		//分享
 		case R.id.Integral_Button_share:		 
 			  task(IntegralActivity.this);
-			  mController.openShare(IntegralActivity.this, false);
+			 // mController.openShare(IntegralActivity.this, false);
 			break;
 		//再来一次
 		case R.id.Integral_Button_again:		
