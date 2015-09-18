@@ -414,7 +414,7 @@ public class IntegralActivity extends Activity implements android.view.View.OnCl
 		//设置分享图片, 参数2为图片的url地址
 		//mController.setShareMedia(new UMImage(IntegralActivity.this, bitmap));	
 		
-		String shareString = "口腔知识问答采用问答的游戏方式，配以幽默诙谐的背景和卡通元素，以通俗易懂的问答形式向广大用户推介了口腔各种常见病的医疗保健知识。";
+		String shareString = "口腔知识问答采用问答的游戏方式，配以幽默诙谐的背景和卡通元素，以通俗易懂的问答形式向广大用户推介了口腔各种常见病的医疗保健知识。http://shouji.baidu.com/software/item?docid=7820651&from=as";
 		
 		
 		

@@ -634,17 +634,14 @@ String appID = "wx3371792d0858282a";
 		// TODO Auto-generated method stub
 
 		
-		String shareString = "哎呀口腔问答!------>" +
+		String shareString = "哎呀口腔问答!->" +
 				"问题："+answerTextView.getText().toString()
 				+"A:"+ A_TextView.getText().toString()
 				+"B:"+ B_TextView.getText().toString()
 				+"C:"+ C_TextView.getText().toString()
-				+"D:"+ D_TextView.getText().toString();
+				+"D:"+ D_TextView.getText().toString()+"    http://shouji.baidu.com/software/item?docid=7820651&from=as";
 		
-		
-		
-		
-		
+
 		WeiXinShareContent weixinContent = new WeiXinShareContent();
 		
 		weixinContent.setTitle("口腔知识问答");
